@@ -1,0 +1,25 @@
+PHP Fatal error:  Uncaught Error: Call to a member function connection() on null in C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:1980
+Stack trace:
+#0 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1946): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#1 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1713): Illuminate\Database\Eloquent\Model->getConnection()
+#2 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1611): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#3 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1647): Illuminate\Database\Eloquent\Model->newModelQuery()
+#4 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1600): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#5 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2540): Illuminate\Database\Eloquent\Model->newQuery()
+#6 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2556): Illuminate\Database\Eloquent\Model->__call('where', Array)
+#7 C:\xampp\htdocs\mon-projet\gestion de rendez vous\test_patients_query.php(10): Illuminate\Database\Eloquent\Model::__callStatic('where', Array)
+#8 {main}
+  thrown in C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php on line 1980
+
+Fatal error: Uncaught Error: Call to a member function connection() on null in C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:1980
+Stack trace:
+#0 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1946): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#1 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1713): Illuminate\Database\Eloquent\Model->getConnection()
+#2 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1611): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#3 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1647): Illuminate\Database\Eloquent\Model->newModelQuery()
+#4 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1600): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#5 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2540): Illuminate\Database\Eloquent\Model->newQuery()
+#6 C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2556): Illuminate\Database\Eloquent\Model->__call('where', Array)
+#7 C:\xampp\htdocs\mon-projet\gestion de rendez vous\test_patients_query.php(10): Illuminate\Database\Eloquent\Model::__callStatic('where', Array)
+#8 {main}
+  thrown in C:\xampp\htdocs\mon-projet\gestion de rendez vous\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php on line 1980

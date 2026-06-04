@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('subscription_payments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('professionnel_id')->constrained()->onDelete('cascade');
+            $table->foreignId('subscription_id')->constrained()->onDelete('cascade');
+            $table->string('stripe_session_id')->nullable();
+            $table->decimal('montant', 8, 2);
+            $table->string('statut')->default('en_attente');
+            $table->timestamp('date_paiement')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('subscription_payments');
+    }
+};
