@@ -1,0 +1,216 @@
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.admin-main {
+    flex: 1;
+    margin-left: var(--pro-sidebar-width);
+    padding: 2rem;
+    background: #f8fafc;
+}
+
+.admin-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* Header */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.admin-header h1 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+}
+
+.admin-header p {
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+.admin-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.admin-search svg {
+    position: absolute;
+    left: 1rem;
+    color: #94a3b8;
+}
+
+.admin-search input {
+    padding: 0.625rem 1rem 0.625rem 2.75rem;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    width: 250px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.admin-search input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.admin-circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.admin-circle-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* KPI Cards */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.admin-stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-stat-card.primary .admin-stat-icon { background: rgba(99, 102, 241, 0.1); color: #6366f1; }
+.admin-stat-card.success .admin-stat-icon { background: rgba(16, 185, 129, 0.1); color: #6366f1; }
+.admin-stat-card.indigo .admin-stat-icon { background: rgba(79, 70, 229, 0.1); color: #4f46e5; }
+.admin-stat-card.purple .admin-stat-icon { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+
+.admin-stat-info h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.admin-stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0.25rem 0;
+}
+
+.admin-stat-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6366f1;
+}
+
+/* Charts */
+.admin-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.admin-chart-card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+.admin-chart-card.wide {
+    grid-column: span 2;
+}
+
+.admin-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.admin-chart-header h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.admin-chart-legend {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.dot.appointments { background: #6366f1; }
+.dot.revenue { background: #6366f1; }
+
+.admin-chart-body.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .admin-charts-grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-chart-card.wide {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,263 @@
+.abonnement-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.abonnement-modal-container {
+    background-color: #f8fafc;
+    border-radius: 24px;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.abonnement-modal-decor-1 {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(248,250,252,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.abonnement-modal-decor-2 {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(239,68,68,0.1) 0%, rgba(248,250,252,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.abonnement-modal-content {
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.abonnement-modal-banner {
+    background: linear-gradient(135deg, #FEF2F2 0%, #fff 100%);
+    border: 1px solid #FECACA;
+    border-radius: 20px;
+    padding: 24px 32px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.1);
+}
+
+.abonnement-modal-icon-wrap {
+    background-color: #FEE2E2;
+    padding: 16px;
+    border-radius: 16px;
+    color: #EF4444;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.5);
+}
+
+.abonnement-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #991B1B;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.025em;
+}
+
+.abonnement-modal-desc {
+    color: #7F1D1D;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.abonnement-modal-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.abonnement-modal-header h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.abonnement-modal-header p {
+    color: #64748b;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.abonnement-modal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.abonnement-modal-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.abonnement-modal-card.highlighted {
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.15);
+    border: 2px solid #6366f1;
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+.abonnement-modal-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.abonnement-modal-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #334155;
+    margin: 0 0 8px 0;
+}
+
+.abonnement-modal-card-desc {
+    color: #64748b;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.abonnement-modal-price-wrap {
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.abonnement-modal-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.05em;
+}
+
+.abonnement-modal-period {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-left: 4px;
+}
+
+.abonnement-modal-features {
+    flex: 1;
+    margin-bottom: 24px;
+}
+
+.abonnement-modal-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+.abonnement-modal-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.abonnement-modal-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.abonnement-modal-card.highlighted .abonnement-modal-btn {
+    background: linear-gradient(135deg, #4F46E5, #6366f1);
+    color: white;
+}
+
+.abonnement-modal-card.highlighted .abonnement-modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+}
+
+.abonnement-modal-empty {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px dashed #cbd5e1;
+    color: #64748b;
+}
+
+.abonnement-modal-empty h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.abonnement-modal-loading {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.abonnement-modal-btn.loading {
+    opacity: 0.8;
+    cursor: not-allowed;
+}

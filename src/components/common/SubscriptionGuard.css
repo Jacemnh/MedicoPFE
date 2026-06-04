@@ -1,0 +1,9 @@
+.subscription-guard-blocked-content {
+    /* When the modal is active, we blur the content underneath to emphasize restriction */
+    filter: blur(6px) grayscale(30%);
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.3s ease;
+    height: 100vh;
+    overflow: hidden;
+}

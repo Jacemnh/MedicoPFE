@@ -1,0 +1,276 @@
+/* ============================================================
+   GESTIONPATIENTS.CSS - MODERN PURPLE/BLUE THEME (SYNCED WITH LISTEPATIENTS.CSS)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --lp-primary: #8B5CF6;
+  --lp-blue: #6366F1;
+  --lp-purple-light: #F5F3FF;
+  --lp-success: #10B981;
+  --lp-warning: #F59E0B;
+  --lp-danger: #EF4444;
+  --lp-gray-50: #F9FAFB;
+  --lp-gray-100: #F3F4F6;
+  --lp-gray-200: #E5E7EB;
+  --lp-gray-400: #9CA3AF;
+  --lp-gray-500: #6B7280;
+  --lp-gray-600: #4B5563;
+  --lp-gray-700: #374151;
+  --lp-gray-900: #111827;
+  --lp-white: #FFFFFF;
+  --sidebar-width: 280px;
+}
+
+.patients-container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--lp-gray-50);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.patients-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ── Header ──────────────────────────────────────── */
+.patients-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.patients-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--lp-gray-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.375rem;
+}
+
+.patients-subtitle {
+  font-size: 1rem;
+  color: var(--lp-gray-500);
+  font-weight: 500;
+}
+
+.patients-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.patients-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, var(--lp-primary), var(--lp-blue));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+.patients-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+/* ── Stats ───────────────────────────────────────── */
+.patients-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.patients-stat-card {
+  background: var(--lp-white);
+  border: 1px solid var(--lp-gray-200);
+  border-radius: 20px;
+  padding: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.3s;
+}
+
+.patients-stat-card:hover {
+  border-color: var(--lp-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Toolbar ─────────────────────────────────────── */
+.patients-filters-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: var(--lp-white);
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--lp-gray-200);
+}
+
+.patients-search-box {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.patients-search-box svg {
+  position: absolute;
+  left: 1.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lp-gray-400);
+}
+
+.patients-search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  background: var(--lp-gray-100);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.patients-search-box input:focus {
+  background: var(--lp-white);
+  border-color: var(--lp-primary);
+}
+
+/* ── Table Layout (Twin of ListePatients) ───────── */
+.lp-table-container {
+  background: var(--lp-white);
+  border: 1px solid var(--lp-gray-200);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.lp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lp-table th {
+  background: var(--lp-gray-50);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--lp-gray-500);
+  border-bottom: 1px solid var(--lp-gray-200);
+  text-align: left;
+}
+
+.lp-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--lp-gray-100);
+  vertical-align: middle;
+}
+
+.lp-user-cell { display: flex; align-items: center; gap: 1rem; }
+.lp-avatar-small {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--lp-primary), var(--lp-blue));
+}
+.lp-user-name { font-weight: 700; color: var(--lp-gray-900); }
+.lp-age-badge { background: var(--lp-gray-100); padding: 4px 8px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; }
+.lp-blood-cell { color: var(--lp-danger); font-weight: 700; background: #FEF2F2; padding: 4px 8px; border-radius: 6px; }
+.lp-sessions-cell { color: var(--lp-primary); font-weight: 700; background: var(--lp-purple-light); padding: 4px 8px; border-radius: 6px; }
+
+.lp-table-action {
+  background: white;
+  border: 1.5px solid var(--lp-primary);
+  color: var(--lp-primary);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.lp-table-action:hover {
+  background: var(--lp-primary);
+  color: white;
+}
+
+/* ── Modal ───────────────────────────────────────── */
+.lp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lp-modal.large { max-width: 900px; width: 100%; border-radius: 28px; background: white; max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; }
+.lp-modal-header { display: flex; align-items: center; gap: 1.5rem; padding: 2rem; border-bottom: 1px solid var(--lp-gray-100); }
+.lp-mh-avatar { width: 80px; height: 80px; border-radius: 20px; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; }
+.lp-mh-info h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 8px; }
+.lp-mh-meta { display: flex; gap: 1.5rem; color: var(--lp-gray-500); font-weight: 600; font-size: 0.9rem; }
+.lp-modal-scroll { padding: 2rem; overflow-y: auto; display: flex; flex-direction: column; gap: 2rem; }
+.lp-record-section { display: flex; flex-direction: column; gap: 1rem; }
+.lp-rs-header { display: flex; align-items: center; gap: 10px; color: var(--lp-primary); }
+.lp-rs-header h3 { font-size: 1.25rem; font-weight: 800; color: var(--lp-gray-900); }
+.lp-params-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.lp-param-item { background: var(--lp-gray-50); padding: 1rem; border-radius: 16px; border: 1px solid var(--lp-gray-200); }
+.lp-pi-label { font-size: 0.75rem; font-weight: 800; color: var(--lp-gray-400); text-transform: uppercase; }
+.lp-pi-value { font-size: 1.1rem; font-weight: 800; color: var(--lp-gray-900); }
+.lp-chronic-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 1.25rem; border-radius: 12px; color: #92400E; }
+.lp-history-item { display: grid; grid-template-columns: 180px 1fr; gap: 1.5rem; padding: 1.5rem; border: 1px solid var(--lp-gray-200); border-radius: 16px; }
+.lp-hi-date strong { display: block; font-size: 1.1rem; }
+.lp-hi-date span { color: var(--lp-primary); font-weight: 700; background: var(--lp-purple-light); padding: 2px 8px; border-radius: 6px; }
+.lp-hi-ord { background: var(--lp-gray-50); border-left: 4px solid var(--lp-primary); padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+
+.lp-modal-footer { padding: 1.5rem 2.5rem; border-top: 1px solid var(--lp-gray-100); display: flex; justify-content: flex-end; gap: 1.25rem; }
+.lp-modal-btn { padding: 12px 24px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; flex: 1; }
+.lp-mb-primary { background: var(--lp-primary); color: white; border: none; }
+.lp-mb-outline { background: white; border: 2px solid var(--lp-primary); color: var(--lp-primary); }
+
+.lp-modal-close { position: absolute; top: 1rem; right: 1rem; width: 40px; height: 40px; border-radius: 10px; border: none; background: var(--lp-gray-100); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.lp-modal-close:hover { background: var(--lp-danger); color: white; }
+
+/* Dark mode overrides */
+.dark-mode {
+  --lp-gray-50: #0f172a;
+  --lp-gray-100: #1e293b;
+  --lp-gray-200: #334155;
+  --lp-white: #1e293b;
+  --lp-gray-900: #F9FAFB;
+  --lp-gray-700: #E5E7EB;
+  --lp-gray-500: #9CA3AF;
+}

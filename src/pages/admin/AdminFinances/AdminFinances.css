@@ -1,0 +1,201 @@
+/* ============================================================
+   ADMIN FINANCES - MODERN PREMIUM THEME
+   ============================================================ */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.admin-main {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.admin-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.admin-header p {
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* --- STATS GRID --- */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.admin-stat-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+}
+
+.admin-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.admin-stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.admin-stat-info h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.admin-stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.admin-stat-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+/* Card Themes */
+.admin-stat-card.success .admin-stat-icon {
+    background: #ecfdf5;
+    color: #10b981;
+}
+.admin-stat-card.success .admin-stat-tag { color: #10b981; }
+
+.admin-stat-card.primary .admin-stat-icon {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+.admin-stat-card.primary .admin-stat-tag { color: #4f46e5; }
+
+.admin-stat-card.warning .admin-stat-icon {
+    background: #fffbeb;
+    color: #f59e0b;
+}
+.admin-stat-card.warning .admin-stat-tag { color: #f59e0b; }
+
+.admin-stat-card.indigo .admin-stat-icon {
+    background: #f5f3ff;
+    color: #8b5cf6;
+}
+.admin-stat-card.indigo .admin-stat-tag { color: #8b5cf6; }
+
+/* --- CHARTS GRID --- */
+.admin-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.admin-chart-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.admin-chart-card.wide {
+    grid-column: span 2;
+}
+
+.admin-chart-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-chart-header h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.admin-chart-body {
+    width: 100%;
+}
+
+.admin-chart-body.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom Tooltip */
+.custom-tooltip {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.custom-tooltip .label {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+.custom-tooltip .desc {
+    color: #4f46e5;
+    font-weight: 800;
+}
+
+@media (max-width: 1200px) {
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-charts-grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-chart-card.wide {
+        grid-column: span 1;
+    }
+}

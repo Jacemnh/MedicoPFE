@@ -1,0 +1,279 @@
+/* Reuse base admin layout styles or import them */
+.admin-chart-body p {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 4px solid #6366f1;
+}
+
+/* Patient List specific styles */
+.admin-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    margin-top: 2rem;
+}
+
+.admin-card-header {
+    margin-bottom: 2rem;
+}
+
+.admin-card-header h2 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.admin-search-box {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    width: 300px;
+    border: 1px solid #e2e8f0;
+}
+
+.admin-search-box .search-icon {
+    color: #94a3b8;
+    margin-right: 0.75rem;
+}
+
+.admin-search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+    color: #334155;
+    width: 100%;
+}
+
+/* Photo Style List Layout */
+.photo-list-container {
+    margin-top: 1rem;
+}
+
+.photo-list-header {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem 1rem 1.5rem;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.photo-list-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.photo-list-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.photo-list-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.photo-list-card.blocked-card {
+    background: #fffcfc;
+    border: 1px solid #fee2e2;
+}
+
+.col-patient {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.col-contact {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.col-statut {
+    flex: 1.5;
+}
+
+.col-date {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.col-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.photo-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #4f46e5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+    overflow: hidden;
+}
+
+.photo-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-user-name {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 1rem;
+}
+
+.photo-user-id {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+}
+
+.photo-info-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+.photo-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.photo-status-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-active {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.status-blocked {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.photo-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.photo-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    height: 36px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.photo-btn.btn-unblock {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.photo-btn.btn-unblock:hover {
+    background: #e0e7ff;
+}
+
+.photo-btn.btn-block {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.photo-btn.btn-block:hover {
+    background: #fde68a;
+}
+
+.photo-btn.btn-delete {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 0;
+    width: 36px; /* Icon only */
+}
+
+.photo-btn.btn-delete:hover {
+    background: #fecaca;
+}
+
+.photo-empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #94a3b8;
+    background: #f8fafc;
+    border-radius: 16px;
+    font-size: 0.95rem;
+}
+
+.admin-card {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.admin-card-header {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.text-right {
+    text-align: right;
+    justify-content: flex-end;
+}
